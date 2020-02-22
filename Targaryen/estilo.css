@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+}
+#cabecera{
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    padding: 20px;
+}
+#cabecera h4{
+    color: red;
+}
+#menu{
+    background-color: black;
+}
+#cajacookies {
+    background-color: white;
+}
+.botones{
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px 10px 0;
+    height: 30px;
+}
+.botones a{
+    color: black;
+}
+#menuFlex{
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.botonesFlex{
+    width: 150px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+.botonesFlex a{
+    text-decoration: none;
+    color: black;
+}
+#centro{
+    background-color: #e3dcc0;
+    height: 350px;
+}
+#pie{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+#pie h5{
+    color: red;
+}
+#pie li{
+    list-style: none;
+}
+#pie a{
+    text-decoration: none;
+    color: white;
+}
