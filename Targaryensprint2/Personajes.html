@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="estilo.css">
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script>
+		/* ésto comprueba la localStorage si ya tiene la variable guardada */
+		function getCookie(cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+		function checkCookie() {
+			var username = getCookie("nombre");
+			if (username != "") {
+				cajacookies.style.display = 'none';
+			}
+		}
+		function aceptarCookies() {
+			document.cookie = "nombre=data";
+			cajacookies.style.display = 'none';
+		}
+		function denegarcookie() {
+			alert("No has aceptado la cookie");
+		}
+		/* ésto se ejecuta cuando la web está cargada */
+		$(document).ready(function () {
+			checkCookie();
+		});
+	</script>
+	<title>Personajes</title>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-5 cabecera">
+			<h2>Juego de tronos</h2>
+			<h3>Casa Targaryen</h3>
+		</div>
+		<div class="col-7 cabecera">
+			<div id="menuFlex" class="collapse">
+				<div class="botonesFlex"><a href="Principal.html">INICIO</a></div>
+				<div class="botonesFlex"><a href="Historia.html">HISTORIA</a></div>
+				<div class="botonesFlex"><a href="Personajes.html">PERSONAJES</a></div>
+				<div class="botonesFlex"><a href="Socio.html">SOCIO</a></div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col" id="centro">
+
+		</div>
+	</div>
+	<footer class="page-footer font-small blue pt-4">
+		<div class="container-fluid text-center text-md-left">
+			<div class="row">
+				<div class="col-md-2 mt-md-0 mt-3">
+					<img src="img/logo.jpg" class="img-fluid" alt="Responsive image">
+				</div>
+				<div class="col-md-2 mt-md-0 mt-3">
+					<h5>Fuego y sangre</h5>
+				</div>
+				<div class="col-md-8 mb-md-0 mb-3">
+					<ul id="pie" class="list-unstyled">
+						<li>
+							<a href="Cookies.html">Política de Cookies</a>
+						</li>
+						<li>
+							<a href="Privacidad.html">Política de privacidad</a>
+						</li>
+						<li>
+							<a href="Avisolegal.html">Aviso legal</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div id="cajacookies">
+		<p>
+			<button onclick="aceptarCookies()" class="pull-right"> Aceptar</button>
+			<button onclick="denegarcookie()" class="pull-right"> Cancelar</button>
+			Éste sitio web usa cookies, si permanece aquí acepta su uso.
+			Puede leer más sobre el uso de cookies en nuestra <a href="Cookies.html">política de privacidad</a>.
+		</p>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+</html>

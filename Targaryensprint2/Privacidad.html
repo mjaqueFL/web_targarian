@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script>
+        /* ésto comprueba la localStorage si ya tiene la variable guardada */
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        function checkCookie() {
+            var username = getCookie("nombre");
+            if (username != "") {
+                cajacookies.style.display = 'none';
+            }
+        }
+        function aceptarCookies() {
+            document.cookie = "nombre=data";
+            cajacookies.style.display = 'none';
+        }
+        function denegarcookie() {
+            alert("No has aceptado la cookie");
+        }
+        /* ésto se ejecuta cuando la web está cargada */
+        $(document).ready(function () {
+            checkCookie();
+        });
+    </script>
+    <title>Home</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-5 cabecera">
+            <h2>Juego de tronos</h2>
+            <h3>Casa Targaryen</h3>
+        </div>
+        <div class="col-7 cabecera">
+            <div id="menuFlex" class="collapse">
+                <div class="botonesFlex"><a href="Principal.html">INICIO</a></div>
+                <div class="botonesFlex"><a href="Historia.html">HISTORIA</a></div>
+                <div class="botonesFlex"><a href="Personajes.html">PERSONAJES</a></div>
+                <div class="botonesFlex"><a href="Socio.html">SOCIO</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" id="centro">
+            <div class="col" id="centrocookie">
+                <article id="content">
+                    <header style="padding-left: 0px;">
+                        <h2>PRIVACIDAD</h2>
+                    </header>
+                    <div class="">
+                        <div class="ng-binding">
+                            <h3>Responsable – ¿quién es el responsable del tratamiento de los datos?</h3>
+
+                            <strong>Identidad:</strong> grupo targaryen<br>
+                            <strong>Domicilio social:</strong> calle falsa 123<br>
+                            <strong class="ng-binding">DNI:</strong> 8723693A<br>
+                            <strong>Teléfono:</strong> 645198732<br>
+                            <strong>Correo Electrónico:</strong> grupotargaryen@gmail.com<br>
+                            <strong>Contacto:</strong> Ignacio<br>
+                            <strong>Nombre del dominio:</strong> webtargaryen.com<br>
+
+
+                            <h3>Finalidades – ¿con qué finalidades tratamos tus datos?</h3>
+
+                            <p>En cumplimiento de lo dispuesto en el Reglamento Europeo 2016/679 General de Protección de
+                                Datos, te informamos de que trataremos los datos que nos facilitas para:</p>
+                            <ul>
+                                <li>Gestionar la contratación de servicios que realice a través de la Plataforma, así como
+                                    la facturación y entrega correspondiente.
+                                </li>
+                                <li class="ng-binding">Remitir periódicamente comunicaciones sobre servicios, eventos y
+                                    noticias relacionadas con las actividades desarrolladas por grupo targaryen, por
+                                    cualquier medio (teléfono, correo postal o email), salvo que se indique lo contrario o
+                                    el usuario se oponga o revoque su consentimiento.
+                                </li>
+                                <li>Remitir información comercial y / o promocional relacionada con el sector de servicios
+                                    contratados y valor añadido para usuarios finales, salvo que se indique lo contrario o
+                                    el usuario se oponga o revoque su consentimiento.
+                                </li>
+                                <li>Dar cumplimiento a las obligaciones legalmente establecidas, así como verificar el
+                                    cumplimiento de las obligaciones contractuales, incluía la prevención de fraude.
+                                </li>
+                                <li>Cesión de datos a organismos y autoridades, siempre y cuando sean requeridos de
+                                    conformidad con las disposiciones legales y reglamentarias.
+                                </li>
+                            </ul>
+
+
+                            <h3>Categorías de datos – ¿Qué datos tratamos?</h3>
+
+                            <p class="ng-binding">Derivada de las finalidades antes mencionadas, en grupo targaryen
+                                gestionamos las siguientes categorías de datos:</p>
+                            <ul>
+                                <li>Datos identificativos</li>
+                                <li>Metadatos de comunicaciones electrónicas</li>
+                                <li class="ng-binding">Datos de información comercial. En caso de que el usuario facilite
+                                    datos de terceros, manifiesta contar con el consentimiento de estos y se compromete a
+                                    trasladarle la información contenida en esta cláusula, eximiendo a grupo targaryen de
+                                    cualquier responsabilidad en este sentido.
+                                </li>
+                                <li class="ng-binding">No obstante, grupo targaryen podrá llevar a cabo las verificaciones
+                                    para constatar este hecho, adoptando las medidas de diligencia debida que correspondan,
+                                    conforme a la normativa de protección de datos.
+                                </li>
+                            </ul>
+
+
+                            <h3>Legitimación – ¿cuál es la legitimación para el tratamiento de tus datos?</h3>
+
+                            <p class="ng-binding">El tratamiento de datos cuyo fin es el envío de boletines periódicos
+                                (newslettering) sobre servicios, eventos y noticias relacionadas con nuestra actividad
+                                profesional se basa en el consentimiento del interesado, solicitado expresamente para llevar
+                                a cabo dichos tratamientos, de acuerdo con la normativa vigente.<br>
+                                Además, la legitimación para el tratamiento de los datos relacionados con ofertas o
+                                colaboraciones se basan en el consentimiento del usuario que remite sus datos, que puede
+                                retirar en cualquier momento, si bien ello puede afectar a la posible comunicación de forma
+                                fluida y obstrucción de procesos que desea realizar.<br>
+                                Por último, los datos se podrán utilizar para dar cumplimiento a las obligaciones legales
+                                aplicables a grupo targaryen
+                            </p>
+
+
+                            <h3>Plazo de Conservación de los Datos – ¿Por cuánto tiempo conservaremos tus datos?</h3>
+
+                            <p class="ng-binding">grupo targaryen conservará los datos personales de los usuarios únicamente
+                                durante el tiempo necesario para la realización de las finalidades para las que fueron
+                                recogidos, mientras no revoque los consentimientos otorgados. Posteriormente, en caso de ser
+                                necesario, mantendrá la información bloqueada durante los plazos legalmente
+                                establecidos.</p>
+
+                            <h3>Destinatarios ¿A qué destinatarios se comunicarán tus datos?</h3>
+
+                            <p class="ng-binding">Tus datos podrán ser accedidos por aquellos proveedores que prestan
+                                servicios a grupo targaryen, tales como servicios de alojamiento, herramientas de marketing
+                                y sistemas de contenido u otros profesionales, cuando dicha comunicación sea necesaria
+                                normativamente, o para la ejecución de los servicios contratados.<br><br>
+                                grupo targaryen, ha suscrito los correspondientes contratos de encargo de tratamiento con
+                                cada uno de los proveedores que prestan servicios a grupo targaryen, con el objetivo de
+                                garantizar que dichos proveedores tratarán tus datos de conformidad con lo establecido en la
+                                legislación vigente.<br><br>
+                                También podrán ser cedidos a las Fuerzas y Cuerpos de Seguridad del Estado en los casos que
+                                exista una obligación legal.<br><br>
+                                Bancos y entidades financieras, para el cobro de los servicios.<br>
+                                Administraciones públicas con competencia en los sectores de actividad, cuando así lo
+                                establezca la normativa vigente.
+                            </p>
+
+                            <h3>
+                                Seguridad de la Información – ¿Qué medidas de seguridad implantamos para cuidar sus datos?
+                            </h3>
+                            <p>
+                                Para proteger las diferentes tipologías de datos reflejados en esta política de privacidad
+                                llevará a cabo las medidas de seguridad técnicas necesarias para evitar su pérdida,
+                                manipulación, difusión o alteración.
+                            </p>
+                            <ul>
+                                <li class="ng-binding">Encriptación de las comunicaciones entre el dispositivo del usuario y
+                                    los servidores de grupo targaryen
+                                </li>
+                                <li class="ng-binding">Encriptación de la información en los propios servidores de grupo
+                                    targaryen
+                                </li>
+                                <li>Otras medidas que eviten el acceso a los datos del usuario por parte de terceros.</li>
+                                <li class="ng-binding">En aquellos casos en los que grupo targaryen cuente con prestadores
+                                    de servicio para el mantenimiento de la plataforma que se encuentren fuera de la Unión
+                                    Europea, estas trasferencias internacionales se hayan regularizadas atendiendo al
+                                    compromiso de grupo targaryen con la protección, integridad y seguridad de los datos
+                                    personales de los usuarios.
+                                </li>
+                            </ul>
+
+                            <h3>Derechos – ¿Cuáles son tus derechos cuando nos facilitas tus datos y cómo puedes
+                                ejercerlos?</h3>
+                            <p class="ng-binding">
+                                Tienes derecho a obtener confirmación sobre si en grupo targaryen estamos tratando datos
+                                personales que te conciernan, o no.<br>
+                                Asimismo, tienes derecho a acceder a tus datos personales, así como a solicitar la
+                                rectificación de los datos inexactos o, en su caso, solicitar su supresión cuando, entre
+                                otros motivos, los datos ya no sean necesarios para los fines que fueron recogidos.<br><br>
+                                En determinadas circunstancias, podrás solicitar la limitación del tratamiento de tus datos,
+                                en cuyo caso únicamente los conservaremos para el ejercicio o la defensa de
+                                reclamaciones.<br>
+                                En determinadas circunstancias y por motivos relacionados con tu situación particular,
+                                podrás oponerte al tratamiento de tus datos. grupo targaryen dejará de tratar los datos,
+                                salvo por motivos legítimos imperiosos, o el ejercicio o la defensa de posibles
+                                reclamaciones.<br><br>
+                                Asimismo, puedes ejercer el derecho a la portabilidad de los datos, así como retirar los
+                                consentimientos facilitados en cualquier momento, sin que ello afecte a la licitud del
+                                tratamiento basado en el consentimiento previo a su retirada.<br><br>
+
+                                Si deseas hacer uso de cualquiera de tus derechos puede dirigirse a <a
+                                    href="mailto:grupotargaryen@gmail.com" class="ng-binding">grupotargaryen@gmail.com</a>.
+                                <br><br>
+                                Por último, te informamos que puedes dirigirte ante la Agencia Española de Protección de
+                                Datos y demás organismos públicos competentes para cualquier reclamación derivada del
+                                tratamiento de tus datos personales.
+
+                            </p>
+
+
+                            <h3>Modificación de la política de privacidad </h3>
+
+
+                            <p class="ng-binding">
+                                grupo targaryen podrá modificar la presente Política de Privacidad en cualquier momento,
+                                siendo publicadas las sucesivas versiones en el Sitio Web. En cualquier caso, grupo
+                                targaryen comunicará con previo aviso las modificaciones de la presente política que afecten
+                                a los usuarios a fin de que puedan aceptar las mismas. <br><br>
+                                La presente Política de Privacidad se encuentra actualizada a fecha 27/12/2018 grupo
+                                targaryen (España). Reservados todos los derechos.
+                                <br><br>
+                                Si lo deseas también puedes consultar nuestra <strong><a href="Cookies.html">Política de
+                                Cookies</a></strong>
+
+                            </p>
+                            <h3>Derechos de imagen</h3>
+                            <p class="ng-binding">
+                                Las imagenes estan recogidas de la pagina HBO y no tenemos derecho
+                            </p>
+                            <h3>Tratamientos de datos de clientes</h3>
+                            <p class="ng-binding" id="impor">
+                                Clausula informativa:
+                                El texto que se muestra a continuación deberá incluirlo en todos aquellos formularios que
+                                utilice para recabar datos personales de sus clientes, tanto si se realiza en soporte papel
+                                como si los recoge a través de un formulario web.
+                                Datos del responsable del tratamiento:
+                                Identidad: grupo targaryen - NIF: 8723693A
+                                Dirección postal: calle falsa 123
+                                Teléfono: 645198732 - Correo electrónico: grupotargaryen@gmail.com
+                                <br><br>
+                                “En grupo targaryen tratamos la información que nos facilita con el fin de prestarles el
+                                servicio solicitado y realizar su facturación. Los datos proporcionados se conservarán
+                                mientras se mantenga la relación comercial o durante el tiempo necesario para cumplir con
+                                las obligaciones legales y atender las posibles responsabilidades que pudieran derivar del
+                                cumplimiento de la finalidad para la que los datos fueron recabados. Los datos no se cederán
+                                a terceros salvo en los casos en que exista una obligación legal. Usted tiene derecho a
+                                obtener información sobre si en grupo targaryen estamos tratando sus datos personales, por
+                                lo que puede ejercer sus derechos de acceso, rectificación, supresión y portabilidad de
+                                datos y oposición y limitación a su tratamiento ante grupo targaryen, calle falsa 123 o en
+                                la dirección de correo electrónico grupotargaryen@gmail.com, adjuntando copia de su DNI o
+                                documento equivalente. Asimismo, y especialmente si considera que no ha obtenido
+                                satisfacción plena en el ejercicio de sus derechos, podrá presentar una reclamación ante la
+                                autoridad nacional de control dirigiéndose a estos efectos a la Agencia Española de
+                                Protección de Datos, C/ Jorge Juan, 6 – 28001 Madrid.
+                                Asimismo, solicitamos su autorización para ofrecerle productos y servicios relacionados con
+                                los contratados y fidelizarle como cliente.”
+                                <br><br>
+                                SI [  ]
+                                <br>
+                                NO [  ]
+                                <br><br>
+                                AVISO: Debe tener en cuenta que, si su cliente marca la opción NO, en ningún caso podrá
+                                enviarle publicidad.
+                                AVISO: No olvide firmar la última hoja de cada uno de los contratos que se han obtenido.
+
+                            </p>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer font-small blue pt-4">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-2 mt-md-0 mt-3">
+                    <img src="img/logo.jpg" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="col-md-2 mt-md-0 mt-3">
+                    <h5>Fuego y sangre</h5>
+                </div>
+                <div class="col-md-8 mb-md-0 mb-3">
+                    <ul id="pie" class="list-unstyled">
+                        <li>
+                            <a href="Cookies.html">Política de Cookies</a>
+                        </li>
+                        <li>
+                            <a href="Privacidad.html">Política de privacidad</a>
+                        </li>
+                        <li>
+                            <a href="Avisolegal.html">Aviso legal</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="cajacookies">
+        <p>
+            <button onclick="aceptarCookies()" class="pull-right"> Aceptar</button>
+            <button onclick="denegarcookie()" class="pull-right"> Cancelar</button>
+            Éste sitio web usa cookies, si permanece aquí acepta su uso.
+            Puede leer más sobre el uso de cookies en nuestra <a href="Cookies.html">política de privacidad</a>.
+        </p>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

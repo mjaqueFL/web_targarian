@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@font-face{
+	font-family: Game of Thrones;
+ 	src: url(fuente/Game_of_Thrones.ttf);			/*incluir fuente*/
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+/*    background-image: url(img/fondo.jpg);
+    background-size: cover;*/
+    background-color: black;
+	text-align: justify;
+	cursor: url("img/cursor.png"), auto;
+    font-family: Roboto, sans-serif;
+}
+a{
+    cursor: url("img/cursor2.png"), auto;
+}
+.cabecera {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    padding: 20px;
+    font-family: Game of Thrones, serif;
+    text-align: left;
+}
+
+.cabecera h3 {
+    color: red;
+}
+.cabecera a{
+    display: inline-block;
+    width: 100%;
+}
+#menu {
+    background-color: black;
+}
+
+.botones {
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px 10px 0;
+    height: 30px;
+}
+
+.botones a {
+    color: black;
+}
+
+#menuFlex {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botonesFlex {
+    width: 150px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.botonesFlex a {
+    text-decoration: none;
+    color: black;
+}
+
+#centro {
+    background-color: #e3dcc0;
+}
+#centro img{
+    float: left;
+    padding: 10px;
+}
+#centro p{
+    padding: 7px;
+    line-height: 25px;
+    font-weight: 600;
+}
+#centrocookie {
+    background-color: #e3dcc0;
+}
+footer h5{
+	color: red;
+    padding-top: 30px;
+}
+footer a {
+    text-decoration: none!important;
+    color: #e3dcc0!important;
+}
+#pie li{
+    display: inline-block;
+    padding-right: 10px;
+    padding-top: 30px;
+}
+#impor{
+    font-weight: bold;
+    font-style: italic;
+}
+@media (max-width: 320px) {
+    .cabecera h3 {
+        color: red;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-top: 2rem;
+        font-weight: 700;
+    }
+    .cabecera h2 {
+        font-size: 1rem;
+    }
+
+    .botonesFlex {
+        width: 120px;
+        background-color: white;
+        margin: 5px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+}
