@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="descripcion" content="Esta es la pagina principal de los  Targaryen, aqui encontrarás información sobre esta casa de ascendencia noble Valyria,toda la informacion e imagenes aqui">
+    <meta name="author" content="Ignacio Lorenzo, David Gonzalez y Daniel Pallero" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="application/ld+json">
+        {
+            "@context" : "http://schema.org",
+            "@type" : "TVEpisode",
+            "partOfTVSeries" : {
+                "@type" : "TVSeries",
+                "name" : "Juego de tronos"
+            },
+            "name" : "Desembarco del Rey",
+            "image" : "http://www.googleusercontent.com/img/logo.jpg",
+            "url" : "http://www.targaryan.es/",
+            "director" : {
+                "@type" : "Person",
+                "name" : "David Benioff,  D. B. Weiss"
+            },
+            "actor" : {
+                "@type" : "Person",
+                "name" : "Ned Stark"
+            },
+            "datePublished" : "2011-04-17",
+            "aggregateRating" : {
+                "@type" : "AggregateRating",
+                "ratingValue" : "La valoracion esta basada en las opiniones  de muchos usuarios",
+                "bestRating" : "5",
+                "ratingCount" : "4.5/5"
+            },
+            "review" : {
+                "@type" : "Review",
+                "author" : {
+                    "@type" : "Person",
+                    "name" : "Javi Marcos"
+                },
+                "datePublished" : "2019-09-05",
+                "reviewBody" : "George R. R. Martin escribe muy bien y además es un narrador magistral que en Juego de Tronos se dedica con mano sabia a dibujar el paisaje donde va a tener lugar su fastuoso drama; a colocar, aquí y allí, las trampas, los recovecos, los escondrijos, los agujeros negros, los túneles, las puertas falsas y los callejones sin salida. Escuché una vez a Pérez-Reverte en un programa de televisión afirmar que escribir un libro es como construir un barco, primer el impresionante esqueleto, el armazón, y luego todo lo demás, hasta la última mano de pintura.  Martin, con Juego de Tronos, no construye un barco: pone los cimientos de su catedral narrativa, y la verdad, los cimientos son firmes, el plano de su iglesia revela a un gran arquitecto porque eso tampoco va implícito en escribir bien. Dotar de sentido general, darle empaque a una historia tan grande, tiene más de planificador o estratega (al fin y al cabo, es como diseñar una campaña bélica en la que nosotros los lectores somos el enemigo al que hay que vencer mediante la capitulación) que de puro esteta o de esgrimista morfosintáctico.  Martin, empero, destaca en lo uno y en lo otro, pero como fulano que una vez se metió en la faena de escribir un libro, valoro todavía más el fino trabajo chinesco de trazar una autopista tan larga y sinuosa y conseguir que la historia, como un río de fuerza brutal, vaya por ella siempre bajo su control."
+            }
+        }
+    </script>
+    <script>
+        /* ésto comprueba la localStorage si ya tiene la variable guardada */
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            var username = getCookie("nombre");
+            if (username != "") {
+                cajacookies.style.display = 'none';
+            }
+        }
+
+        function aceptarCookies() {
+            document.cookie = "nombre=data";
+            cajacookies.style.display = 'none';
+        }
+
+        function denegarcookie() {
+            alert("No has aceptado la cookie");
+        }
+
+        /* ésto se ejecuta cuando la web está cargada */
+        $(document).ready(function () {
+            checkCookie();
+        });
+    </script>
+    <title>Personajes</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-5 cabecera">
+            <h2>Juego de tronos</h2>
+            <h3>Casa Targaryen</h3>
+        </div>
+        <div class="col-7 cabecera">
+            <div id="menuFlex" class="collapse">
+                <div class="botonesFlex"><a href="index.html">INICIO</a></div>
+                <div class="botonesFlex"><a href="Historia.html">HISTORIA</a></div>
+                <div class="botonesFlex"><a href="Personajes.html">PERSONAJES</a></div>
+                <div class="botonesFlex"><a href="Socio.html">SOCIO</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col centro">
+            <div id="carrusel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="img/daenerys.jpg" alt="First slide" onclick="daenerys()">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/hermano.jpg" alt="Second slide" onclick="hermano()">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/drogo.jpg" alt="Third slide" onclick="drogo()">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/drogon.jpg" alt="Third slide" onclick="drogon()">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/rhaegal.jpg" alt="Third slide" onclick="rhaegal()">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/viserion.jpg" alt="Third slide" onclick="viserion()">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carrusel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carrusel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+            <div id="fotos">
+                <a onclick="daenerys()"><img src="img/daenerys.jpg" class="img-fluid" alt="daenerys"></a>
+                <a onclick="hermano()"><img src="img/hermano.jpg" class="img-fluid" alt="vyserion"></a>
+                <a onclick="drogo()"><img src="img/drogo.jpg" class="img-fluid" alt="khal drogo"></a>
+                <a onclick="drogon()"><img src="img/drogon.jpg" class="img-fluid" alt="drogon"></a>
+                <a onclick="rhaegal()"><img src="img/rhaegal.jpg" class="img-fluid" alt="rhaegal"></a>
+                <a onclick="viserion()"><img src="img/viserion.jpg" class="img-fluid" alt="viserion"></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col centro">
+            <p id="bioPerso">
+                <script>
+                    window.onload = daenerys();
+                    function daenerys() {
+                        var texto = "<img src=\"img/logo_dane.PNG\" class=\"img-fluid\" alt=\"imagen daeneys\">";
+                        texto += "<h4>Daenerys Targaryen</h4>\n" +
+                            "La muerte de su esposo, Khal Drogo, no impidió que Daenerys elaborará estrategias para su regreso a los Siete Reinos para recuperar el Trono de Hierro. Dany reunió a los Inmaculados de Astapor para su causa y continúa haciendo crecer su ejército.\n"
+						document.getElementById("bioPerso").innerHTML = texto;
+                    }
+					function hermano() {
+						var texto = "<img src=\"img/logo_default.PNG\" class=\"img-fluid\" alt=\"imagen viserys\">";
+						texto += "<h4>Viserys Targaryen</h4>\n" +
+								"El único heredero superviviente de la Casa Targaryen, el joven Viserys fue enviado con su hermana recién nacida Daenerys a Essos para vivir a salvo. En el exilio se obsesionó con recuperar el trono de su familia pero Khal Drogo lo ejecutó con una corona de oro fundido antes de poder reclamar su puesto como rey.\n"
+						document.getElementById("bioPerso").innerHTML = texto;
+					}
+                    function drogo() {
+                        var texto = "<img src=\"img/logo_default.PNG\" class=\"img-fluid\" alt=\"imagen khal drogo\">";
+                        texto += "<h4>Drogo</h4>\n" +
+                            "Un guerrero feroz que dirigía una tribu de jinetes de Essos, nunca había sido derrotado en batalla hasta que sucumbió a una herida que se agravó después de la intromisión de la bruja Mirri Maz Duur."
+                        document.getElementById("bioPerso").innerHTML = texto;
+                    }
+                    function drogon() {
+                        var texto = "<img src=\"img/logo_dragones.PNG\" class=\"img-fluid\" alt=\"imagen drogon el dragon \">";
+                        texto += "<h4>Drogon</h4>\n" +
+                            "Drogon es uno de los dragones nacidos en el Mar Dothraki, junto a Rhaegal y Viserion. Eclosionado por Daenerys Targaryen, fue nombrado en memoria de su difunto esposo, Drogo. Se cree que es la reencarnación de Balerion el Terror Negro, pero Daenerys decide darle un nuevo nombre para una nueva vida."
+                        document.getElementById("bioPerso").innerHTML = texto;
+                    }
+                    function rhaegal() {
+                        var texto = "<img src=\"img/logo_dragones.PNG\" class=\"img-fluid\" alt=\"imagen rheaegal el dragon\">";
+                        texto += "<h4>Rhaegal</h4>\n" +
+                            "Rhaegal es uno de los dragones nacidos en el Mar Dothraki, junto a Drogon y Viserion. Eclosionado por Daenerys Targaryen, fue nombrado en memoria de su hermano, Rhaegar Targaryen."
+                        document.getElementById("bioPerso").innerHTML = texto;
+                    }
+                    function viserion() {
+                        var texto = "<img src=\"img/logo_dragones.PNG\" class=\"img-fluid\" alt=\"imagen viserion el dragon\">";
+                        texto += "<h4>Viserion</h4>\n" +
+                            "Viserion es uno de los dragones nacidos en el Mar Dothraki, junto a Rhaegal y Drogon. Eclosionado por Daenerys Targaryen, fue nombrado en memoria de su hermano, Viserys Targaryen."
+                        document.getElementById("bioPerso").innerHTML = texto;
+                    }
+                </script>
+            </p>
+        </div>
+    </div>
+    <footer class="page-footer font-small blue pt-4">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-2 mt-md-0 mt-3">
+                    <img src="img/logo.jpg" class="img-fluid" alt="logoTargaryen">
+                </div>
+                <div class="col-md-2 mt-md-0 mt-3">
+                    <h4>Fuego y sangre</h4>
+                </div>
+                <div class="col-md-8 mb-md-0 mb-3">
+                    <ul class="list-unstyled" id="pie">
+                        <li>
+                            <a href="Cookies.html">Política de Cookies</a>
+                        </li>
+                        <li>
+                            <a href="Privacidad.html">Política de privacidad</a>
+                        </li>
+                        <li>
+                            <a href="Avisolegal.html">Aviso legal</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="cajacookies">
+        <p>
+            <button onclick="aceptarCookies()" class="pull-right"> Aceptar</button>
+            <button onclick="denegarcookie()" class="pull-right"> Cancelar</button>
+            Éste sitio web usa cookies, si permanece aquí acepta su uso.
+            Puede leer más sobre el uso de cookies en nuestra <a href="Cookies.html">política de privacidad</a>.
+        </p>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

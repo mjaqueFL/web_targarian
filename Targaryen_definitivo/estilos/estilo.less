@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@colorblanco:white;/*white*/
+@colornegro:black;
+@colorpastel:#e3dcc0;
+@colorrojo:red;
+@otrorojo:#A70E0E;
+@font-face {
+  font-family: Game of Thrones;
+  src: url(../fuente/Game_of_Thrones.ttf);            /*incluir fuente*/
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+
+  background-color: @colornegro;
+  text-align: justify;
+  cursor: url("../img/cursor.png"), auto;
+  font-family: Roboto, sans-serif;
+  max-width: 1200px;
+}
+
+a {
+  cursor: url("../img/cursor2.png"), auto;
+}
+#menu {
+  background-color: @colornegro;
+}
+
+#menuFlex {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.botonesFlex {
+  width: 150px;
+  background-color: @colorblanco;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.cabecera {
+  background-color: @colornegro;
+  color: @colorblanco;
+  overflow: hidden;
+  padding: 20px;
+  font-family: Game of Thrones, serif;
+  text-align: left;
+}
+
+.botones {
+  background-color: @colorblanco;
+  border-radius: 5px;
+  margin: 5px 10px 0;
+  height: 30px;
+}
+
+#centrocookie {
+  background-color: @colorpastel;
+}
+
+.centro {
+  background-color:@colorpastel;
+}
+
+#carrusel {
+  width: 100%;
+  display: none;
+}
+
+#fotos {
+  width: 500px;
+  display: inline;
+}
+
+#impor {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.tamanio {
+  width: 600px;
+}
+
+.espacio {
+  padding-top: 25px;
+}
+
+.espacio2 {
+  margin-bottom: 10px;
+}
+
+.colorRojo {
+  background-color: @otrorojo;
+}
+
+.cabecera h3 {
+  color: @colorrojo;
+}
+
+.cabecera a {
+  display: inline-block;
+  width: 100%;
+}
+
+.botones a {
+  color: @colornegro;
+}
+
+
+.botonesFlex a {
+  text-decoration: none;
+  color: @colornegro;
+}
+
+
+.centro img {
+  float: left;
+  padding: 10px;
+}
+
+.centro p {
+  padding: 6px;
+  line-height: 15px;
+  font-weight: 600;
+}
+
+
+footer h4 {
+  color: @colorrojo;
+  padding-top: 30px;
+}
+
+footer a {
+  text-decoration: none !important;
+  color: #e3dcc0 !important;
+}
+
+#pie li {
+  display: inline-block;
+  padding-right: 10px;
+  padding-top: 30px;
+  text-transform: uppercase;
+}
+
+
+button[type="submit"]:hover {
+  background-color: @otrorojo;
+}
+
+@media (max-width: 722px) {
+  #carrusel {
+    display: block;
+  }
+
+  #fotos {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .cabecera h3 {
+    color: @colorrojo;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-top: 2rem;
+    font-weight: 700;
+  }
+
+  .cabecera h2 {
+    font-size: 1rem;
+  }
+
+  .botonesFlex {
+    width: 120px;
+    background-color: @colorblanco;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+  }
+}
